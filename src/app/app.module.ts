@@ -1,11 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { LoginComponent } from './user/login/login.component';
-import {ReactiveFormsModule} from '@angular/forms';
-import { RegisterComponent } from './user/register/register.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {LoginComponent} from './user/login/login.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {RegisterComponent} from './user/register/register.component';
+import {UserComponent} from './user/user/user.component';
+import {MessageComponent} from './message/message.component';
 
 
 @NgModule({
@@ -13,14 +15,17 @@ import { RegisterComponent } from './user/register/register.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-
+    MessageComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

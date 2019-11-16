@@ -34,7 +34,7 @@ export class UserService {
       age: 18,
       address: 'Tokyo',
       // tslint:disable-next-line:max-line-length
-      image: '',
+      image: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/07/21/10/avatar-neytiri.jpg',
       status: false
     },
     {

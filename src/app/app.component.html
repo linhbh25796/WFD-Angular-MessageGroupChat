@@ -1,7 +1,7 @@
 <div class="text-center" id="body">
   <div class="text-center">
     <a routerLink="login" *ngIf="userService.checkLogin==='true'">Login | </a>
-    <div *ngIf="userService.checkLogin==='false'" style="background: blue">
+    <div *ngIf="userService.checkLogin==='false'" style="background: #aaaaaa">
       <img id="image" [src]="userService.userOnline.image" alt="">
       <u> {{userService.userOnline.name}}</u> |
       <button type="button" (click)="logout()" >Logout</button>
@@ -12,9 +12,12 @@
     <div>
       <router-outlet></router-outlet>
     </div>
-    <img *ngIf="userService.checkLogin==='true'" src="https://s.dowload.vn/data/image/2016/04/12/Teamwork-Chat-giao-dien.jpg" alt="">
+    <img *ngIf="userService.checkLogin==='true'" src="https://didongviet.vn/blog/wp-content/uploads/2019/06/updated-google-hangouts-chat-header@2x.png" alt="">
   </div>
 </div>
 <div>
-
+  <div *ngIf="userService.checkLogin==='false'">
+    <app-user class="a" id="user"></app-user>
+    <app-message class="a" id="app-message"></app-message>
+  </div>
 </div>
